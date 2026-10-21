@@ -52,8 +52,9 @@ body::before{
   box-sizing: border-box;
 }
 
+/* Reducimos el padding inferior del hero para evitar el hueco gigante antes del separador */
 .hero{
-  padding: 60px 0 40px;
+  padding: 60px 0 10px;
 }
 
 .hero__top{
@@ -89,8 +90,9 @@ body::before{
   font-size: clamp(34px, 4vw, 56px);
 }
 
+/* Mayor espaciado debajo de tu cargo profesional */
 .hero__title h2{
-  margin: 10px 0 18px;
+  margin: 10px 0 38px; 
   font-weight: 700;
   font-size: clamp(18px, 2vw, 28px);
 }
@@ -158,19 +160,27 @@ body::before{
   font-weight: 800;
 }
 
+/* Párrafos principales: Textos claros, espaciados y JUSTIFICADOS */
 .lead{
-  margin:0;
+  margin: 0 0 1.5rem 0;
   max-width: 980px;
   font-weight: 300;
   font-size: 18px;
-  line-height: 1.9;
-  color: rgba(255,255,255,.92);
+  line-height: 1.8;
+  color: rgba(255,255,255,.95);
+  text-align: justify;
+}
+.lead:last-of-type {
+  margin-bottom: 0.8rem;
 }
 
+/* Textos secundarios (Experiencia) JUSTIFICADOS */
 .muted{
   margin: 10px 0 0;
-  color: var(--muted);
+  color: rgba(255,255,255,.85);
   font-weight: 300;
+  line-height: 1.7;
+  text-align: justify;
 }
 
 .divider{
@@ -271,7 +281,7 @@ body::before{
   color: rgba(255,255,255,.55);
 }
 
-/* Panels (Proyectos / Artículos) */
+/* Panels (Proyectos / Artículos) JUSTIFICADOS */
 .panel{
   border: 2px solid rgba(142,160,255,.75);
   margin-top: 26px;
@@ -306,6 +316,7 @@ body::before{
   font-weight: 600;
   line-height: 1.6;
   font-size: 18px;
+  text-align: justify;
 }
 
 .panel__img{
@@ -321,7 +332,7 @@ body::before{
   filter: drop-shadow(0 16px 26px rgba(0,0,0,.35));
 }
 
-/* Formación */
+/* Formación y Listas Generales */
 .edu{
   display:grid;
   grid-template-columns: 90px 1fr;
@@ -371,7 +382,54 @@ body::before{
   margin-top: 28px; 
 }
 
-/* Footer */
+/* LISTAS Y ENLACES (Estilos Nuevos Añadidos) */
+.lead-list, .xp-list {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: 0;
+  padding-left: 24px;
+  text-align: justify;
+}
+
+.lead-list {
+  margin-bottom: 0; /* Quita el espacio innecesario de I+D */
+}
+
+.xp-list {
+  margin-bottom: 2rem;
+}
+
+.lead-list li, .xp-list li {
+  margin-bottom: 0.6rem;
+}
+
+.xp-list a, 
+.xp-list a:link, 
+.xp-list a:visited, 
+.xp-list a:active {
+    color: rgba(255, 255, 255, 0.95); 
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+.xp-list a:hover {
+    color: rgba(142,160,255,.95); /* Tono azul corporativo al pasar el mouse */
+    text-decoration: none;
+}
+
+.subtitle-id {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Footer y Copyright */
 .footer{
   padding: 28px 0 60px;
 }
@@ -410,40 +468,37 @@ body::before{
   filter: drop-shadow(0 12px 18px rgba(0,0,0,.35));
 }
 
+.copyright-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 24px;
+  text-align: center;
+  width: 100%;
+}
+
 
 /* Responsive */
 @media (max-width: 860px){
-
-  /* Layout general */
   .wrap{ padding: 0 16px; }
   html, body{ overflow-x: hidden; }
-
-  /* HERO */
   .hero{ padding: 36px 0 20px; }
-
   .hero__top{
     gap: 18px;
     flex-direction: column;
     align-items: center;
   }
-
   .avatar{ width: 110px; height: 110px; }
-
   .hero__title{
     width: 100%;
-    min-width: 0;          /* clave */
+    min-width: 0; 
     text-align: center;
   }
-
-  .hero__title h2{ margin: 8px 0 12px; }
-
+  .hero__title h2{ margin: 8px 0 24px; } /* Ajuste responsive del cargo */
   .hero__links{
     width: 100%;
     gap: 12px;
     justify-content: center;
   }
-
-  /* Pill (correo) */
   .pill{
     display: flex;
     width: 100%;
@@ -451,45 +506,30 @@ body::before{
     box-sizing: border-box;
     font-size: 15px;
   }
-
   .pill__icon{ flex: 0 0 auto; }
-
   .pill > span:last-child{
     flex: 1 1 auto;
-    min-width: 0;            /* clave */
+    min-width: 0; 
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-
-  /* Texto */
   .lead{ font-size: 16px; line-height: 1.75; }
-
-  /* Iconos */
   .iconBtn{ width: 42px; height: 42px; }
-
-  /* Panels */
   .panel{ padding: 18px; }
   .panel__img{ min-height: 130px; }
-
-  /* Experiencia / Educación */
   .xp{
     gap: 12px;
     padding: 14px 0;
-    grid-template-columns: 72px minmax(0, 1fr); /* clave */
+    grid-template-columns: 72px minmax(0, 1fr); 
   }
-
   .edu{ gap: 12px; padding: 14px 0; }
-
   .xp__header{ flex-wrap: wrap; gap: 10px; }
-
   .badge{
     white-space: normal;
     font-size: 11px;
     padding: 5px 10px;
   }
-
-  /* Evitar overflow por palabras largas */
   .xp__main,
   .xp h4, .xp h5,
   .lead, .panel__title, .panel__blue{
@@ -497,10 +537,6 @@ body::before{
     overflow-wrap: anywhere;
     word-break: break-word;
   }
-
   .xp h4{ font-size: 22px; line-height: 1.15; }
   .xp h5{ font-size: 18px; line-height: 1.2; }
 }
-
-
-
