@@ -13,14 +13,18 @@
   <link rel="stylesheet" href="styles.css" />
   
   <style>
-    /* Estilos extra para la sección de Sobre Mí */
+    /* Estilos corregidos para la sección de Sobre Mí (Sin difuminado y Justificado) */
+    .lead {
+      text-align: justify;
+    }
     .lead-list {
-      font-size: 1rem;
+      font-size: inherit;
       line-height: 1.6;
-      color: var(--text-color, #4a4a4a);
+      color: inherit; /* Hereda el color blanco/claro general para evitar el difuminado */
       margin-top: 0.5rem;
       margin-bottom: 1.5rem;
       padding-left: 1.5rem;
+      text-align: justify;
     }
     .lead-list li {
       margin-bottom: 0.5rem;
@@ -30,7 +34,10 @@
       font-weight: 600;
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
-      color: var(--title-color, #222);
+      color: inherit; /* Hereda el color brillante general */
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
   </style>
 </head>
@@ -61,7 +68,7 @@
               <span>christian.cadena.r@outlook.com</span>
             </a>
 
-            <!-- IMPORTANTE: Asegúrate de guardar tu nuevo PDF en la carpeta assets con este nombre exacto -->
+            <!-- Botón de descarga de CV -->
             <a class="iconBtn"
               href="assets/CV_Christian_Cadena_2026_Final.pdf"
               download
@@ -97,7 +104,7 @@
           Ingeniero en Electrónica y Telecomunicaciones con Máster en Inteligencia Artificial y más de 15 años de trayectoria liderando proyectos de infraestructura crítica, telecomunicaciones y ciberseguridad empresarial.
         </p>
         <p class="lead">
-          Mi trabajo se centra en la <strong>convergencia de dos mundos</strong>: la ingeniería de redes tradicional (Cisco, Fortinet, Huawei) y el desarrollo de soluciones de automatización con Python y análisis de datos. Ayudo a las organizaciones a optimizar sus operaciones, automatizar reportes técnicos y asegurar sus comunicaciones bajo normativas como ISO/IEC 27001.
+          Mi trabajo se centra en la <strong>convergencia de dos mundos</strong>: la ingeniería de redes tradicional (Cisco, Fortinet, Huawei) y el desarrollo de soluciones de automatización con Python y análisis de datos. Ayudo a las organizaciones a optimizar sus operaciones, automatizar reportes técnicos y asegurar sus comunicaciones empresariales.
         </p>
         
         <div class="subtitle-id">🔬 Investigación y Desarrollo (I+D)</div>
@@ -107,284 +114,4 @@
         <ul class="lead-list">
           <li>Bases matemáticas y probabilísticas del <strong>Deep Learning</strong> utilizando <strong>PyTorch</strong>.</li>
           <li>Diseño de arquitecturas <strong>RAG (Retrieval-Augmented Generation)</strong> para consulta de documentación técnica.</li>
-          <li>Técnicas de <strong>Fine-tuning</strong> para adaptar Modelos de Lenguaje (LLMs) a entornos de ingeniería.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- SEPARADOR -->
-    <div class="wrap divider"></div>
-
-    <!-- TECNOLOGÍAS + EXPERIENCIA -->
-    <section class="wrap">
-      <div class="block">
-        <h3 class="sectionTitle">Tecnologías:</h3>
-        <div class="techRow">
-          <!-- Icono de Python -->
-          <div class="techIcon">
-            <img src="assets/python_icon.png" alt="Python">
-          </div>
-          <div class="techName">Python</div>
-        </div>
-        <!-- Aquí puedes añadir más iconos (Fortinet, Cisco, PyTorch, etc) siguiendo la misma estructura superior -->
-      </div>
-
-      <div class="block">
-        <h3 class="sectionTitle">Experiencia:</h3>
-
-        <article class="xp">
-          <div class="xp__left">
-            <div class="xp__icon">
-              <!-- icono codigo -->
-              <img src="assets/code.png" alt="Código">
-            </div>
-          </div>
-
-          <div class="xp__main">
-            <div class="xp__header">
-              <div>
-                <h4>V&P Group Ingeniería</h4>
-                <h5>Ingeniero de Networking & Automatización</h5>
-              </div>
-              <span class="badge badge--dim">2025-PRESENTE</span>
-            </div>
-            <p class="muted">Desarrollo de soluciones de automatización con Python para optimizar procesos, diagnóstico de fallos y soporte en infraestructuras de red.</p>
-          </div>
-        </article>
-
-        <article class="xp">
-          <div class="xp__left">
-            <div class="xp__icon">
-              <!-- icono Trabajo -->
-              <img src="assets/work.png" alt="Trabajo">
-            </div>
-          </div>
-
-          <div class="xp__main">
-            <div class="xp__header">
-              <div>
-                <h4>Consultor Independiente (3NeuralTech)</h4>
-                <h5>Consultor de Infraestructura IT & Automatización</h5>
-              </div>
-              <span class="badge badge--dim">2024-PRESENTE</span>
-            </div>
-            <p class="muted">Ejecución de migraciones de firewalls (FortiGate), redes inalámbricas y desarrollo de scripts en Python para procesamiento masivo de evidencias y reportes.</p>
-          </div>
-        </article>
-
-        <article class="xp">
-          <div class="xp__left">
-            <div class="xp__icon">
-              <!-- icono Trabajo -->
-              <img src="assets/work.png" alt="Trabajo">
-            </div>
-          </div>
-
-          <div class="xp__main">
-            <div class="xp__header">
-              <div>
-                <h4>Afiatic Comunicaciones Cia. Ltda</h4>
-                <h5>IT Project Manager</h5>
-              </div>
-              <span class="badge badge--dim">2017-2024</span>
-            </div>
-            <p class="muted">
-              Dirección integral del área de TI, liderando la planificación y ejecución de proyectos de infraestructura de redes, telecomunicaciones y ciberseguridad.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- PROYECTOS -->
-    <section class="wrap">
-      <div class="block">
-        <h3 class="sectionTitle">Proyectos y Artículos:</h3>
-
-        <article class="panel">
-          <div class="panel__text">
-            <h4 class="panel__title">
-              <a href="https://github.com/krist2357/APP_NETWORKING_2"
-                target="_blank"
-                rel="noopener">
-                Aplicación para Configuración masiva de equipos de red
-              </a>
-            </h4>
-            <p class="panel__blue">
-              Network SSH Automation Tool es una aplicación desarrollada en Python diseñada para automatizar tareas de
-              administración y diagnóstico en equipos de red Cisco.
-            </p>
-            <p class="panel__blue">
-              El proyecto combina potencia de automatización con una interfaz gráfica intuitiva, permitiendo ejecutar
-              múltiples comandos en uno o varios dispositivos de forma simultánea.
-            </p>
-          </div>
-          <div class="panel__img">
-            <img src="assets/mesh.png" alt="Imagen decorativa" />
-          </div>
-        </article>
-
-        <article class="panel panel--small">
-          <div class="panel__text">
-            <h4 class="panel__title">
-              <a href="https://github.com/krist2357/RFM_SPARK"
-                target="_blank"
-                rel="noopener">
-                Segmentación de clientes mediante el método RFM
-              </a>
-            </h4>
-            <p class="panel__blue">
-              Para el presente proyecto, se realiza una segmentación de clientes, en función de su comportamiento de compra
-              usando pandas y spark.
-            </p>
-          </div>
-          <div class="panel__img">
-            <img src="assets/rfm.png" alt="Icono RFM" />
-          </div>
-        </article>
-
-        <article class="panel panel--small">
-          <div class="panel__text">
-            <h4 class="panel__title">
-              <a href="https://github.com/krist2357/canalWIFIconKNNyLSTM"
-                target="_blank"
-                rel="noopener">
-                Optimización del espectro Wifi mediante KNN y LSTM
-              </a>
-            </h4>
-            <p class="panel__blue">
-              Proyecto de integración tecnológica, desarrollado como parte de mi formación en Inteligencia Artificial (UNIR). 
-              El objetivo es resolver un problema crítico en telecomunicaciones: la planificación eficiente de canales en la banda de 2.4 GHz mediante modelos predictivos.
-              El proyecto muestra una comparativa técnica entre KNN y redes neuronales recurrentes LSTM para la predicción de interferencias y optimización de canales en bandas WiFi de 2.4GHz.
-            </p>
-          </div>
-          <div class="panel__img">
-            <img src="assets/intelligentsignal.png" alt="Animación de red">
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- FORMACIÓN -->
-    <section class="wrap">
-      <div class="block">
-        <h3 class="sectionTitle">Formación:</h3>
-
-        <div class="edu">
-          <div class="edu__icon">
-            <!-- icono educación -->
-            <img src="assets/unir.png" alt="Educación">
-          </div>
-          <div class="edu__body">
-            <h4>Universidad Internacional de la Rioja (UNIR)</h4>
-            <a href="https://1drv.ms/f/c/0c28d54d88a5fdfd/IgD9_aWITdUoIIAMu7oHAAAAAVWXjrgb3ef1sxmTM79Bz88"
-              target="_blank"
-              rel="noopener"
-              class="chipLink">
-              <span class="chip">🔗 Maestría</span>
-            </a>
-            <p class="muted">Máster Universitario en Inteligencia Artificial.</p>
-          </div>
-        </div>
-
-        <div class="edu">
-          <div class="edu__icon">
-            <!-- icono escuela -->
-            <img src="assets/epn.png" alt="Escuela Politécnica Nacional">
-          </div>
-          <div class="edu__body">
-            <h4>Escuela Politécnica Nacional</h4>
-            <a href="https://1drv.ms/f/c/0c28d54d88a5fdfd/IgD9_aWITdUoIIAMu7oHAAAAAVWXjrgb3ef1sxmTM79Bz88"
-              target="_blank"
-              rel="noopener"
-              class="chipLink">
-              <span class="chip">🔗 Ingeniería</span>
-            </a>
-            <p class="muted">Ingeniero en Electrónica y Telecomunicaciones.</p>
-          </div>
-        </div>
-
-        <h3 class="sectionTitle sectionTitle--spaced">Cursos:</h3>
-
-        <div class="edu">
-          <div class="edu__icon">
-            <!-- icono cursos -->
-            <img src="assets/courses.png" alt="Cursos">
-          </div>
-          <div class="edu__body">
-            <h4>Certificados y Formación Continua</h4>
-            <a href="https://1drv.ms/f/c/0c28d54d88a5fdfd/IgD9_aWITdUoIIAMu7oHAAAAAVWXjrgb3ef1sxmTM79Bz88"
-              target="_blank"
-              rel="noopener"
-              class="chipLink">
-              <span class="chip">🔗 Credenciales</span>
-            </a>
-            <p class="muted">
-              Certificaciones activas en Cisco CCNA, Fortinet FCA, Python y Machine Learning (DataCamp y Frogames).
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER / CONTACTO -->
-    <div class="wrap divider"></div>
-
-    <footer class="wrap footer">
-      <div class="footer__top">
-        <h2>Christian Cadena</h2>
-
-        <div class="footer__links">
-          <a class="pill" 
-            href="mailto:christian.cadena.r@outlook.com"
-            aria-label="Email">
-            <span class="pill__icon" aria-hidden="true">
-              <!-- Mail icon -->
-              <img src="assets/mail_icon.png" alt="Email">
-            </span>
-            <span>christian.cadena.r@outlook.com</span>
-          </a>
-
-          <!-- Actualizado también en el footer -->
-          <a class="iconBtn" 
-            href="assets/CV_Christian_Cadena_2026_Final.pdf" 
-            download
-            aria-label="Descargar CV">
-            <!-- Doc icon -->
-            <img src="assets/hoja_de_vida.png" alt="CV / Hoja de vida">
-          </a>
-
-          <a class="iconBtn"
-            href="https://www.linkedin.com/in/christiancadenar/"
-            target="_blank"
-            rel="noopener"
-            aria-label="LinkedIn">
-            <!-- LinkedIn icon -->
-            <img src="assets/linkedin.png" alt="LinkedIn">
-          </a>
-
-          <a class="iconBtn"
-            href="https://github.com/krist2357"
-            target="_blank"
-            rel="noopener"
-            aria-label="GitHub">
-            <!-- GitHub icon -->
-            <img src="assets/github.png" alt="GitHub">
-          </a>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <div class="loc">
-          <span class="loc__pin" aria-hidden="true">
-            <!-- Location pin icon -->
-            <img src="assets/location.png" alt="Ubicación">
-          </span>
-          Quito-Ecuador
-        </div>
-      </div>
-    </footer>
-
-  </main>
-</body>
-</html>
+          <li>Técnicas de <strong>Fine-tuning</strong> para
