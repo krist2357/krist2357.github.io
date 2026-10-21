@@ -10,76 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Enlace al archivo CSS optimizado -->
   <link rel="stylesheet" href="styles.css" />
-  
-  <style>
-    /* Estilos corregidos para eliminar el difuminado, justificar textos y mejorar el espaciado de párrafos */
-    .lead, .muted, .panel__blue {
-      text-align: justify;
-      color: rgba(255, 255, 255, 0.9) !important;
-      line-height: 1.7;
-    }
-    
-    /* Espaciado específico para los párrafos principales */
-    .lead {
-      margin-bottom: 1.5rem; 
-    }
-    .lead:last-of-type {
-      margin-bottom: 0.8rem; /* Reduce el espacio antes de la lista */
-    }
-    
-    /* Configuración base para listas */
-    .lead-list, .xp-list {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.9) !important;
-      margin-top: 0;
-      padding-left: 1.5rem;
-      text-align: justify;
-    }
-
-    /* Reducción del espacio gigante después de la lista en "Sobre mí" */
-    .lead-list {
-      margin-bottom: 0.5rem !important; 
-    }
-
-    /* Mantenemos el margen en experiencia */
-    .xp-list {
-      margin-bottom: 2rem;
-    }
-    
-    .lead-list li, .xp-list li {
-      margin-bottom: 0.6rem;
-    }
-
-    /* Separación extra para la cabecera (Hero) */
-    .hero__title h2 {
-      margin-bottom: 2.5rem !important; /* Mayor separación debajo de tu cargo */
-    }
-
-    /* FORZAR LA ELIMINACIÓN DE COLOR MORADO/AZUL Y SUBRAYADO EN LOS ENLACES */
-    .xp-list a, 
-    .xp-list a:link, 
-    .xp-list a:visited, 
-    .xp-list a:active {
-        color: rgba(255, 255, 255, 0.9) !important; 
-        text-decoration: none !important; 
-        transition: color 0.3s ease;
-    }
-    
-    .xp-list a:hover {
-        color: #a0a0a0 !important; 
-        text-decoration: none !important;
-    }
-
-    .copyright-text {
-        font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.6);
-        margin-top: 20px;
-        text-align: center;
-        width: 100%;
-    }
-  </style>
 </head>
 
 <body>
@@ -147,7 +79,7 @@
           Además, como profesional independiente, dedico parte de mi tiempo al estudio y construcción de laboratorios locales enfocados en IA Generativa:
         </p>
         
-        <!-- Textos sin negrita y con el espaciado inferior corregido -->
+        <!-- Textos sin negrita -->
         <ul class="lead-list">
           <li>Bases matemáticas y probabilísticas del Deep Learning utilizando PyTorch.</li>
           <li>Diseño de arquitecturas RAG (Retrieval-Augmented Generation) para consulta de documentación técnica.</li>
