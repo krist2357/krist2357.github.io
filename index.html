@@ -13,35 +13,33 @@
   <link rel="stylesheet" href="styles.css" />
   
   <style>
-    /* Estilos corregidos para eliminar el difuminado y justificar textos */
+    /* Estilos corregidos para eliminar el difuminado, justificar textos y mejorar el espaciado de párrafos */
     .lead, .muted, .panel__blue {
       text-align: justify;
       color: rgba(255, 255, 255, 0.9) !important;
+      line-height: 1.7;
+    }
+    
+    /* Espaciado específico para los párrafos principales */
+    .lead {
+      margin-bottom: 1.5rem; 
+    }
+    .lead:last-of-type {
+      margin-bottom: 0.8rem; /* Reduce el espacio antes de la lista */
     }
     
     .lead-list, .xp-list {
       font-size: 0.95rem;
-      line-height: 1.6;
+      line-height: 1.7;
       color: rgba(255, 255, 255, 0.9) !important;
-      margin-top: 0.5rem;
-      margin-bottom: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
       padding-left: 1.5rem;
       text-align: justify;
     }
     
     .lead-list li, .xp-list li {
-      margin-bottom: 0.5rem;
-    }
-
-    .subtitle-id {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      margin-bottom: 0.6rem;
     }
   </style>
 </head>
@@ -98,19 +96,23 @@
 
       <div class="block">
         <h3 class="sectionTitle">Sobre mí:</h3>
+        
         <p class="lead">
-          Ingeniero en Electrónica y Telecomunicaciones con Máster en Inteligencia Artificial y más de 15 años de trayectoria liderando proyectos de infraestructura crítica, telecomunicaciones y ciberseguridad empresarial.
+          Ingeniero en Electrónica y Telecomunicaciones con Máster en Inteligencia Artificial y más de 15 años de trayectoria liderando proyectos de infraestructura crítica, telecomunicaciones y ciberseguridad empresarial[cite: 8].
         </p>
+        
         <p class="lead">
-          Mi trabajo se centra en la <strong>convergencia de dos mundos</strong>: la ingeniería de redes tradicional (Cisco, Fortinet, Huawei) y el desarrollo de soluciones de automatización con Python y análisis de datos. Ayudo a las organizaciones a optimizar sus operaciones, automatizar reportes técnicos y asegurar sus comunicaciones empresariales.
+          Mi trabajo se centra en la convergencia de dos mundos: la ingeniería de redes tradicional (Cisco, Fortinet, Huawei) y el desarrollo de soluciones de automatización con Python y análisis de datos[cite: 8]. Ayudo a las organizaciones a optimizar sus operaciones, automatizar reportes técnicos y asegurar sus comunicaciones empresariales[cite: 8].
         </p>
+        
         <p class="lead">
-          Como profesional independiente, dedico parte de mi tiempo al estudio y construcción de laboratorios locales enfocados en IA Generativa:
+          Además, como profesional independiente, dedico parte de mi tiempo al estudio y construcción de laboratorios locales enfocados en IA Generativa[cite: 8]:
         </p>
+        
         <ul class="lead-list">
-          <li>Bases matemáticas y probabilísticas del <strong>Deep Learning</strong> utilizando <strong>PyTorch</strong>.</li>
-          <li>Diseño de arquitecturas <strong>RAG (Retrieval-Augmented Generation)</strong> para consulta de documentación técnica.</li>
-          <li>Técnicas de <strong>Fine-tuning</strong> para adaptar Modelos de Lenguaje (LLMs) a entornos de ingeniería.</li>
+          <li>Bases matemáticas y probabilísticas del <strong>Deep Learning</strong> utilizando <strong>PyTorch</strong>[cite: 8].</li>
+          <li>Diseño de arquitecturas <strong>RAG (Retrieval-Augmented Generation)</strong> para consulta de documentación técnica[cite: 8].</li>
+          <li>Técnicas de <strong>Fine-tuning</strong> para adaptar Modelos de Lenguaje (LLMs) a entornos de ingeniería[cite: 8].</li>
         </ul>
       </div>
     </section>
