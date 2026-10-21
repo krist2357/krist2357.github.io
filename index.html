@@ -13,31 +13,43 @@
   <link rel="stylesheet" href="styles.css" />
   
   <style>
-    /* Estilos corregidos para la sección de Sobre Mí (Sin difuminado y Justificado) */
-    .lead {
+    /* Estilos corregidos para eliminar el difuminado y justificar textos */
+    .lead, .muted, .panel__blue {
       text-align: justify;
+      color: rgba(255, 255, 255, 0.9) !important; /* Alto contraste, elimina lo difuminado */
     }
-    .lead-list {
-      font-size: inherit;
+    
+    .lead-list, .xp-list {
+      font-size: 0.95rem;
       line-height: 1.6;
-      color: inherit; /* Hereda el color blanco/claro general para evitar el difuminado */
+      color: rgba(255, 255, 255, 0.9) !important;
       margin-top: 0.5rem;
       margin-bottom: 1.5rem;
       padding-left: 1.5rem;
       text-align: justify;
     }
-    .lead-list li {
+    
+    .lead-list li, .xp-list li {
       margin-bottom: 0.5rem;
     }
+
     .subtitle-id {
       font-size: 1.2rem;
       font-weight: 600;
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
-      color: inherit; /* Hereda el color brillante general */
+      color: #ffffff; /* Color puro para el título de I+D */
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+
+    /* Estilo para acomodar múltiples tecnologías */
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -114,4 +126,87 @@
         <ul class="lead-list">
           <li>Bases matemáticas y probabilísticas del <strong>Deep Learning</strong> utilizando <strong>PyTorch</strong>.</li>
           <li>Diseño de arquitecturas <strong>RAG (Retrieval-Augmented Generation)</strong> para consulta de documentación técnica.</li>
-          <li>Técnicas de <strong>Fine-tuning</strong> para
+          <li>Técnicas de <strong>Fine-tuning</strong> para adaptar Modelos de Lenguaje (LLMs) a entornos de ingeniería.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SEPARADOR -->
+    <div class="wrap divider"></div>
+
+    <!-- TECNOLOGÍAS + EXPERIENCIA -->
+    <section class="wrap">
+      <div class="block">
+        <h3 class="sectionTitle">Tecnologías Principales:</h3>
+        <div class="tech-grid">
+          <div class="techRow">
+            <div class="techIcon"><img src="assets/python_icon.png" alt="Python" onerror="this.style.display='none'"></div>
+            <div class="techName">Python & Pandas</div>
+          </div>
+          <div class="techRow">
+            <div class="techIcon"><img src="assets/cisco_icon.png" alt="Cisco" onerror="this.style.display='none'"></div>
+            <div class="techName">Cisco Routing & Switching</div>
+          </div>
+          <div class="techRow">
+            <div class="techIcon"><img src="assets/fortinet_icon.png" alt="Fortinet" onerror="this.style.display='none'"></div>
+            <div class="techName">Fortinet Security</div>
+          </div>
+          <div class="techRow">
+            <div class="techIcon"><img src="assets/pytorch_icon.png" alt="PyTorch" onerror="this.style.display='none'"></div>
+            <div class="techName">Machine Learning & PyTorch</div>
+          </div>
+          <div class="techRow">
+            <div class="techIcon"><img src="assets/sql_icon.png" alt="SQL" onerror="this.style.display='none'"></div>
+            <div class="techName">SQL & Bases de Datos</div>
+          </div>
+        </div>
+        <p class="lead" style="font-size: 0.85rem; margin-top: 10px;"><em>* Nota: Si no tienes los íconos de Cisco, Fortinet, etc., en tu carpeta 'assets', los textos se mostrarán limpiamente sin imagen de error.</em></p>
+      </div>
+
+      <div class="block" style="margin-top: 40px;">
+        <h3 class="sectionTitle">Experiencia Profesional:</h3>
+
+        <article class="xp">
+          <div class="xp__left">
+            <div class="xp__icon">
+              <!-- icono codigo -->
+              <img src="assets/code.png" alt="Código">
+            </div>
+          </div>
+
+          <div class="xp__main">
+            <div class="xp__header">
+              <div>
+                <h4>V&P Group Ingeniería</h4>
+                <h5>Ingeniero de Networking & Automatización</h5>
+              </div>
+              <span class="badge badge--dim">Nov 2025 - Presente</span>
+            </div>
+            <ul class="xp-list">
+              <li>Desarrollo e implementación de soluciones de automatización con Python para optimizar procesos tecnológicos, diagnóstico de fallos y soporte técnico de operaciones de red.</li>
+              <li>Administración, mantenimiento y aseguramiento de disponibilidad en infraestructuras de red empresarial y bases de datos corporativas.</li>
+              <li>Estandarización de flujos de trabajo operativos que reducen los tiempos de respuesta y mejoran la eficiencia del servicio.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="xp">
+          <div class="xp__left">
+            <div class="xp__icon">
+              <!-- icono Trabajo -->
+              <img src="assets/work.png" alt="Trabajo">
+            </div>
+          </div>
+
+          <div class="xp__main">
+            <div class="xp__header">
+              <div>
+                <h4>Consultor Independiente (3NeuralTech)</h4>
+                <h5>Consultor de Infraestructura IT & Automatización</h5>
+              </div>
+              <span class="badge badge--dim">Ago 2024 - Presente</span>
+            </div>
+            <ul class="xp-list">
+              <li><strong>Seguridad y Redes Críticas:</strong> Ejecución de migraciones de firewalls perimetrales (Check Point a FortiGate), despliegue de enlaces redundantes SD-WAN, túneles IPsec y enrutamiento OSPF.</li>
+              <li><strong>Automatización Aplicada:</strong> Desarrollo de scripts a medida en Python para la generación automatizada de informes técnicos de cumplimiento y procesamiento masivo de evidencias operativas fotográficas.</li>
+              <li><strong>Infraestructura Inalámbrica y Óptica:</strong> Aprovisionamiento de APs Huawei mediante iMaster NCE-Campus y ejecución de pruebas de presupuesto óptico en enlaces de fibra
