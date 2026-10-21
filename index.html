@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="styles.css" />
   
   <style>
-    /* Estilos para eliminar el difuminado, justificar textos y mejorar el espaciado de párrafos */
+    /* Estilos corregidos para eliminar el difuminado, justificar textos y mejorar el espaciado de párrafos */
     .lead, .muted, .panel__blue {
       text-align: justify;
       color: rgba(255, 255, 255, 0.9) !important;
@@ -28,26 +28,56 @@
       margin-bottom: 0.8rem; /* Reduce el espacio antes de la lista */
     }
     
+    /* Configuración base para listas */
     .lead-list, .xp-list {
       font-size: 0.95rem;
       line-height: 1.7;
       color: rgba(255, 255, 255, 0.9) !important;
       margin-top: 0;
-      margin-bottom: 2rem;
       padding-left: 1.5rem;
       text-align: justify;
+    }
+
+    /* Reducción del espacio gigante después de la lista en "Sobre mí" */
+    .lead-list {
+      margin-bottom: 0.5rem !important; 
+    }
+
+    /* Mantenemos el margen en experiencia */
+    .xp-list {
+      margin-bottom: 2rem;
     }
     
     .lead-list li, .xp-list li {
       margin-bottom: 0.6rem;
     }
 
-    /* --- Separación extra para la cabecera (Hero) --- */
+    /* Separación extra para la cabecera (Hero) */
     .hero__title h2 {
-      margin-bottom: 1.2rem !important; /* Da aire debajo de tu cargo */
+      margin-bottom: 2.5rem !important; /* Mayor separación debajo de tu cargo */
     }
-    .hero__links {
-      margin-top: 1rem !important; /* Empuja los botones hacia abajo */
+
+    /* FORZAR LA ELIMINACIÓN DE COLOR MORADO/AZUL Y SUBRAYADO EN LOS ENLACES */
+    .xp-list a, 
+    .xp-list a:link, 
+    .xp-list a:visited, 
+    .xp-list a:active {
+        color: rgba(255, 255, 255, 0.9) !important; 
+        text-decoration: none !important; 
+        transition: color 0.3s ease;
+    }
+    
+    .xp-list a:hover {
+        color: #a0a0a0 !important; 
+        text-decoration: none !important;
+    }
+
+    .copyright-text {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 20px;
+        text-align: center;
+        width: 100%;
     }
   </style>
 </head>
@@ -117,10 +147,11 @@
           Además, como profesional independiente, dedico parte de mi tiempo al estudio y construcción de laboratorios locales enfocados en IA Generativa:
         </p>
         
+        <!-- Textos sin negrita y con el espaciado inferior corregido -->
         <ul class="lead-list">
-          <li>Bases matemáticas y probabilísticas del <strong>Deep Learning</strong> utilizando <strong>PyTorch</strong>.</li>
-          <li>Diseño de arquitecturas <strong>RAG (Retrieval-Augmented Generation)</strong> para consulta de documentación técnica.</li>
-          <li>Técnicas de <strong>Fine-tuning</strong> para adaptar Modelos de Lenguaje (LLMs) a entornos de ingeniería.</li>
+          <li>Bases matemáticas y probabilísticas del Deep Learning utilizando PyTorch.</li>
+          <li>Diseño de arquitecturas RAG (Retrieval-Augmented Generation) para consulta de documentación técnica.</li>
+          <li>Técnicas de Fine-tuning para adaptar Modelos de Lenguaje (LLMs) a entornos de ingeniería.</li>
         </ul>
       </div>
     </section>
@@ -313,32 +344,27 @@
             </p>
             <ul class="xp-list" style="margin-top: 0; margin-bottom: 0;">
               <li>
-                <!-- Enlaces -->
-                <a href="https://www.credly.com/badges/bd54fd2a-170a-4cf6-bde6-6016307c3910/linked_in_profile" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3);">
+                <a href="https://www.credly.com/badges/bd54fd2a-170a-4cf6-bde6-6016307c3910/linked_in_profile" target="_blank" rel="noopener">
                   Cisco Certified Network Associate (CCNA)
                 </a>  
               </li>
               <li>
-                <!-- Enlaces -->
-                <a href="https://www.credly.com/badges/bddc7eaa-d496-44c5-95f1-8a689f690ef9/linked_in_profile" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3);">
+                <a href="https://www.credly.com/badges/bddc7eaa-d496-44c5-95f1-8a689f690ef9/linked_in_profile" target="_blank" rel="noopener">
                   Fortinet Certified Associate (FCA) Cybersecurity
                 </a>
               </li>
               <li>
-                <!-- Enlaces -->
-                <a href="http://certificates.frogamesformacion.com/4e828a9d-4bb9-4e35-9d72-b9b51c19d2b3" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3);">
+                <a href="http://certificates.frogamesformacion.com/4e828a9d-4bb9-4e35-9d72-b9b51c19d2b3" target="_blank" rel="noopener">
                   Machine Learning de la A a la Z | Frogames Formación
                 </a>
               </li>
               <li>
-                <!-- Enlaces -->
-                <a href="https://api.accredible.com/v1/auth/invite?code=961ab81d10e3f22afc23&credential_id=e300d831-5ae0-464e-a594-9483d4474b6f&url=http%3A%2F%2Fcertificates.frogamesformacion.com%2Fe300d831-5ae0-464e-a594-9483d4474b6f&ident=29bfb1fc2154621c80b4e32a0e5ea58f7d36f3b7" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3);">
+                <a href="https://api.accredible.com/v1/auth/invite?code=961ab81d10e3f22afc23&credential_id=e300d831-5ae0-464e-a594-9483d4474b6f&url=http%3A%2F%2Fcertificates.frogamesformacion.com%2Fe300d831-5ae0-464e-a594-9483d4474b6f&ident=29bfb1fc2154621c80b4e32a0e5ea58f7d36f3b7" target="_blank" rel="noopener">
                   Curso completo de Estadística descriptiva - RStudio y Python | Frogames Formación
                 </a>
               </li>
               <li>
-                <!-- Enlaces -->
-                <a href="https://verifirma.unir.net/CSV/ed295425-e6cb-43dc-b858-87e7ef34555b" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3);">
+                <a href="https://verifirma.unir.net/CSV/ed295425-e6cb-43dc-b858-87e7ef34555b" target="_blank" rel="noopener">
                   Programación en Python | Universidad Internacional de La Rioja (UNIR)
                 </a>
               </li>
@@ -397,7 +423,6 @@
           </span>
           Quito-Ecuador
         </div>
-        <!-- Derechos de Autor añadidos aquí -->
         <div class="copyright-text">
             © 2026 @krist2357 | 3NeuralTech
         </div>  
